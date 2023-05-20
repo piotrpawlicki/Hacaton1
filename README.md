@@ -3,9 +3,10 @@
 
 ## Spis treści
 * [Podsumowanie](#Podsumowanie)
-  * [Wisielec](Wisielec)
-  * [Generator imion Bohatera](Generator imion Bohatera)
-* [Wykorzystane technologie](#Wykorzystane technologie)
+  * [Wisielec](#Wisielec)
+  * [Generator_imion_Bohatera](#Generator imion Bohatera)
+  
+* [Wykorzystane_technologie](#Wykorzystane technologie)
 * [Podziękowania](#Podziękowania)
 * [Autor](#Autor)
 
