@@ -64,7 +64,7 @@ def wartosc_karty(karta, talia):
         wartosc = talia[karta]
     return wartosc
 
-def porównaj_karty(moc_gracza, moc_bota):
+def porownaj_karty(moc_gracza, moc_bota):
     if moc_gracza > moc_bota:
         return 'Gracz'
     else:
@@ -78,6 +78,6 @@ moc_gracza = wartosc_karty(karta_gracza, gracz_talia)
 
 karta_bota = wybor_bota_bot_pierwszy(bot_talia)
 moc_bota = wartosc_karty(karta_bota, bot_talia)
-wynik = porównaj_karty(moc_gracza, moc_bota)
+wynik = porownaj_karty(moc_gracza, moc_bota)
 
 print(f'Gracz wybrał {karta_gracza}, a komputer {karta_bota}. Wygrał {wynik}')
