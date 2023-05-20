@@ -48,36 +48,33 @@ def wybor_gracza(gracz_talia):
 
 ##wybor bota dla gry gdy bot zaczyna
 def wybor_bota_bot_pierwszy(talia_bota):
-    karta_bota = random.choice(talia_bota)
+    karta_bota = random.choice(list(talia_bota.keys()))
     return karta_bota
 
 def wybor_bota_bot_drugi(karta_gracza,talia_gracza, talia_bota):
-    moc_gracza = wartosc_karty(karta_gracza, talia_gracza)
-    karty_bota_moc = sorted(talia_bota.keys())
-    for i in karty_bota_moc:
-        if i > moc_gracza:
-            wybor_bota =  i
-
-
+      moc_gracza = wartosc_karty(karta_gracza, talia_gracza)
+      print(talia_bota)
+      print(talia_gracza)
+      moc_bota, karta_bota = min(talia_bota.items(), key=lambda x:(x[1] > moc_gracza, x[1]))
+      return {karta_bota, moc_bota}
 def wartosc_karty(karta, talia):
     if karta in talia:
-        wartosc = talia[karta]
-    return wartosc
+        val = talia[karta]
+    return val
 
 def porownaj_karty(moc_gracza, moc_bota):
     if moc_gracza > moc_bota:
         return 'Gracz'
-    else:
+    elif moc_bota > moc_gracza:
         return 'Bot'
+    else:
+        return 'Remnis'
+
 
 talia = Talia_kart() #talia jest słownikiem
 gracz_talia, bot_talia = (Przypisz_Karty(talia))  #karty bota i gracza to również słowniki
-##print(gracz_talia)
 karta_gracza = wybor_gracza(gracz_talia) # gracz wybiera kartę ze swojej talii
-moc_gracza = wartosc_karty(karta_gracza, gracz_talia)
 
-karta_bota = wybor_bota_bot_pierwszy(bot_talia)
-moc_bota = wartosc_karty(karta_bota, bot_talia)
-wynik = porownaj_karty(moc_gracza, moc_bota)
+a = wybor_bota_bot_drugi(karta_gracza, gracz_talia, bot_talia)
+print(a)
 
-print(f'Gracz wybrał {karta_gracza}, a komputer {karta_bota}. Wygrał {wynik}')
