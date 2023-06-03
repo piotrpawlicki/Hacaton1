@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Hacaton 2/.idea/Hacaton 2.iml" filepath="$PROJECT_DIR$/../../Hacaton 2/.idea/Hacaton 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Hacaton1.iml" filepath="$PROJECT_DIR$/.idea/Hacaton1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../kurs-python/.idea/kurs-python.iml" filepath="$PROJECT_DIR$/../../kurs-python/.idea/kurs-python.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../pythonProject/.idea/pythonProject.iml" filepath="$PROJECT_DIR$/../../pythonProject/.idea/pythonProject.iml" />
     </modules>
   </component>
 </project>
